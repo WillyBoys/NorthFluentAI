@@ -4,7 +4,7 @@ import InfoCard from '../components/InfoCard'
 import LearningPathNav from '../components/LearningPathNav'
 import PageSection from '../components/PageSection'
 import { TrustMeter } from '../components/VisualBlocks'
-import judgmentImage from '../assets\Productive work at a wooden desk.png'
+import judgmentImage from '../assets/Productive work at a wooden desk.png'
 import { primaryLearningPath } from '../data/learningPaths'
 
 const strengths = [
