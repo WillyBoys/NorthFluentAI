@@ -17,48 +17,56 @@ const strategies = [
     title: 'Zero shot prompting',
     description:
       'Ask AI to complete a task without examples. Best for quick requests, summaries, and simple tasks.',
+    example: 'Summarize this article in five bullet points.',
   },
   {
     icon: 'model',
     title: 'Few shot prompting',
     description:
       'Give examples so AI can follow a pattern. Best when style, format, or structure matters.',
+    example: 'Use these two sample captions, then write three more in the same style.',
   },
   {
     icon: 'strategy',
     title: 'Step by step prompting',
     description:
       'Ask AI to work through a problem in stages. Best for learning, planning, and problem solving.',
+    example: 'Walk me through this math problem one step at a time.',
   },
   {
     icon: 'tools',
     title: 'Multi step prompting',
     description:
       'Break a large task into smaller prompts. Best for building stronger results one piece at a time.',
+    example: 'First help me outline the essay, then help me improve the introduction.',
   },
   {
     icon: 'judgment',
     title: 'Constrained prompting',
     description:
       'Set rules for format, tone, length, or structure. Best when the result must follow requirements.',
+    example: 'Explain this in under 100 words using simple language.',
   },
   {
     icon: 'growth',
     title: 'Recursive prompting',
     description:
       'Use one answer as the starting point for revision. Best for improving writing, ideas, or drafts.',
+    example: 'Make this answer clearer, shorter, and more professional.',
   },
   {
     icon: 'warning',
     title: 'Adversarial prompting',
     description:
       'Ask AI to challenge an idea or find weaknesses. Best for critical thinking and stronger arguments.',
+    example: 'Find three weak points in this argument and suggest improvements.',
   },
   {
     icon: 'human',
     title: 'Role prompting',
     description:
       'Ask AI to respond from a specific role or perspective. Best when audience or tone matters.',
+    example: 'Respond like a patient tutor explaining this to a beginner.',
   },
 ] as const
 
@@ -87,7 +95,7 @@ export default function PromptBetter() {
   return (
     <>
       <section className="content-hero">
-        <div className="container content-hero__layout">
+        <div className="container content-hero__layout content-hero__layout--single">
           <div className="content-hero__copy">
             <p className="section-eyebrow">Prompt Better</p>
             <h1>Get better results by asking better questions.</h1>
@@ -96,15 +104,19 @@ export default function PromptBetter() {
               better prompt can lead to better explanations, stronger drafts,
               clearer structure, and more useful output.
             </p>
+            <div className="hero-note">
+              <p className="tool-preview__label">Main idea</p>
+              <p>
+                Prompting is not about special tricks. It is about clarity,
+                context, structure, and practice.
+              </p>
+            </div>
+            <div className="hero-actions">
+              <Link to="/prompt-improver" className="button button-primary">
+                Try the Prompt Tool
+              </Link>
+            </div>
           </div>
-
-          <aside className="content-hero__panel">
-            <p className="tool-preview__label">Main idea</p>
-            <p>
-              Prompting is not about special tricks. It is about clarity,
-              context, structure, and practice.
-            </p>
-          </aside>
         </div>
       </section>
 
@@ -163,6 +175,7 @@ export default function PromptBetter() {
               icon={strategy.icon}
               title={strategy.title}
               description={strategy.description}
+              footer={<p className="card-example">Example: {strategy.example}</p>}
             />
           ))}
         </div>
@@ -200,6 +213,17 @@ export default function PromptBetter() {
             <li key={tip}>{tip}</li>
           ))}
         </ul>
+      </PageSection>
+
+      <PageSection surface="muted">
+        <div className="takeaway-panel">
+          <p className="section-eyebrow">Key takeaway</p>
+          <h2>Prompting is clearer communication, not a secret code.</h2>
+          <p>
+            Start with the task, add useful context, choose a format, and revise
+            the response when it is not quite right.
+          </p>
+        </div>
       </PageSection>
 
       <PageSection className="cta-strip">

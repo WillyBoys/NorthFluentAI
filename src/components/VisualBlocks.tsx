@@ -25,9 +25,8 @@ type TrustZone = {
 export function JourneyVisual({ steps }: { steps: JourneyStep[] }) {
   return (
     <div className="journey-visual" aria-label="NorthFluent AI learning journey">
-      {steps.map((step, index) => (
+      {steps.map((step) => (
         <div className="journey-visual__step" key={step.title}>
-          <span className="journey-visual__number">{String(index + 1).padStart(2, '0')}</span>
           <div>
             <p className="journey-visual__label">{step.label}</p>
             <h3>{step.title}</h3>

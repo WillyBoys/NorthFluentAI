@@ -113,7 +113,7 @@ export default function PromptImprover() {
   return (
     <>
       <section className="tool-hero">
-        <div className="container tool-hero__layout">
+        <div className="container tool-hero__layout tool-hero__layout--single">
           <div className="tool-hero__copy">
             <p className="section-eyebrow">Prompt Improver</p>
             <h1>Sharpen Prompts for Better AI Results</h1>
@@ -122,23 +122,26 @@ export default function PromptImprover() {
               then see how adding task, context, audience, format, and
               constraints can improve the result.
             </p>
+            <div className="hero-note hero-note--stacked">
+              <p className="tool-preview__label">What this tool improves</p>
+              <div className="hero-note__grid">
+                <p>It makes the task clearer.</p>
+                <p>It adds context, audience, format, and useful constraints.</p>
+                <p>It explains the changes in beginner friendly language.</p>
+              </div>
+              <p className="hero-note__formula">
+                Simple formula: <strong>{promptFrameworkFormula}</strong>
+              </p>
+            </div>
+            <div className="hero-actions">
+              <a href="#prompt-tool" className="button button-primary">
+                Improve a Prompt
+              </a>
+            </div>
             <div className="hero-trust-bar">
               <span>Server-side Gemini</span>
               <span>Beginner friendly</span>
               <span>Teaches as it improves</span>
-            </div>
-          </div>
-
-          <div className="tool-hero__panel">
-            <p className="tool-preview__label">What this tool improves</p>
-            <div className="tool-points">
-              <p>It helps make the task clearer.</p>
-              <p>It adds context, audience, format, and useful constraints.</p>
-              <p>It explains the changes in short, beginner friendly language.</p>
-            </div>
-            <div className="tool-formula">
-              <span className="tool-formula__label">Simple formula</span>
-              <strong>{promptFrameworkFormula}</strong>
             </div>
           </div>
         </div>
@@ -151,6 +154,7 @@ export default function PromptImprover() {
       />
 
       <PageSection
+        id="prompt-tool"
         eyebrow="Try it"
         title="Paste in a rough prompt and improve it"
         intro="You do not need to write a perfect prompt. Start simple, then use the improved version as a better starting point."

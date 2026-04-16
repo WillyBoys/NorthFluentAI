@@ -43,7 +43,7 @@ export default function About() {
   return (
     <>
       <section className="content-hero">
-        <div className="container content-hero__layout">
+        <div className="container content-hero__layout content-hero__layout--single">
           <div className="content-hero__copy">
             <p className="section-eyebrow">About</p>
             <h1>Why I built NorthFluent AI.</h1>
@@ -52,15 +52,19 @@ export default function About() {
               have a clear and honest place to learn what it is, what it does
               well, and where it should be questioned.
             </p>
+            <div className="hero-note">
+              <p className="tool-preview__label">Brand promise</p>
+              <p>
+                The goal is not to make people dependent on AI. The goal is to
+                help them become confident, informed, and capable users of it.
+              </p>
+            </div>
+            <div className="hero-actions">
+              <Link to="/ai-basics" className="button button-primary">
+                Start Learning
+              </Link>
+            </div>
           </div>
-
-          <aside className="content-hero__panel">
-            <p className="tool-preview__label">Brand promise</p>
-            <p>
-              The goal is not to make people dependent on AI. The goal is to
-              help them become confident, informed, and capable users of it.
-            </p>
-          </aside>
         </div>
       </section>
 
@@ -150,6 +154,18 @@ export default function About() {
           <li>Use-case paths for students, job seekers, creators, and professionals</li>
           <li>Responsible AI guidance woven through every section</li>
         </ul>
+      </PageSection>
+
+      <PageSection surface="muted">
+        <div className="takeaway-panel">
+          <p className="section-eyebrow">North star</p>
+          <h2>Help beginners become fluent in AI, not dependent on it.</h2>
+          <p>
+            The platform should keep making AI easier to understand while
+            reinforcing privacy, fact checking, bias awareness, and human
+            responsibility.
+          </p>
+        </div>
       </PageSection>
 
       <PageSection className="cta-strip">

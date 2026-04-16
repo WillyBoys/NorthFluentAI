@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 
 type PageSectionProps = {
+  id?: string
   eyebrow?: string
   title?: string
   intro?: string
@@ -10,6 +11,7 @@ type PageSectionProps = {
 }
 
 export default function PageSection({
+  id,
   eyebrow,
   title,
   intro,
@@ -22,7 +24,7 @@ export default function PageSection({
     .join(' ')
 
   return (
-    <section className={classes}>
+    <section id={id} className={classes}>
       <div className="container">
         {(eyebrow || title || intro) && (
           <div className="section-heading">

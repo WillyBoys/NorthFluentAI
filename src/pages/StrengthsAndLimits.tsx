@@ -116,7 +116,7 @@ export default function StrengthsAndLimits() {
   return (
     <>
       <section className="content-hero">
-        <div className="container content-hero__layout">
+        <div className="container content-hero__layout content-hero__layout--single">
           <div className="content-hero__copy">
             <p className="section-eyebrow">Strengths and Limits</p>
             <h1>Where AI Shines and Struggles</h1>
@@ -125,15 +125,19 @@ export default function StrengthsAndLimits() {
               also be wrong, shallow, or misleading. Learning the difference
               helps you use it more wisely.
             </p>
+            <div className="hero-note">
+              <p className="tool-preview__label">Main idea</p>
+              <p>
+                Knowing what to trust AI with and what to double check is one
+                of the most important AI skills.
+              </p>
+            </div>
+            <div className="hero-actions">
+              <Link to="/about" className="button button-primary">
+                Learn About the Mission
+              </Link>
+            </div>
           </div>
-
-          <aside className="content-hero__panel">
-            <p className="tool-preview__label">Main idea</p>
-            <p>
-              Knowing what to trust AI with and what to double check is one of
-              the most important AI skills.
-            </p>
-          </aside>
         </div>
       </section>
 
@@ -234,6 +238,17 @@ export default function StrengthsAndLimits() {
             <li key={item}>{item}</li>
           ))}
         </ul>
+      </PageSection>
+
+      <PageSection surface="muted">
+        <div className="takeaway-panel">
+          <p className="section-eyebrow">Key takeaway</p>
+          <h2>AI is strongest when it supports your thinking instead of replacing it.</h2>
+          <p>
+            Use it to draft, practice, explain, and explore, then slow down and
+            verify anything that affects grades, work, health, money, or trust.
+          </p>
+        </div>
       </PageSection>
 
       <PageSection className="cta-strip">

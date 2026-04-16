@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <>
       <section className="hero-section">
-        <div className="container hero-layout">
+        <div className="container hero-layout hero-layout--single">
           <div className="hero-copy hero-copy--featured">
             <p className="section-eyebrow">NorthFluent AI</p>
             <h1>AI is everywhere. Learn how to use it wisely.</h1>
@@ -73,6 +73,14 @@ export default function Home() {
               people understand what AI is, what it does well, where it falls
               short, and how to use it effectively and responsibly.
             </p>
+            <div className="hero-note">
+              <p className="tool-preview__label">Beginner journey</p>
+              <p>
+                Care about why AI matters, understand what it is, practice
+                better prompting, then build judgment about when to trust and
+                verify.
+              </p>
+            </div>
             <div className="hero-actions">
               <Link to="/ai-basics" className="button button-primary">
                 Explore AI Basics
@@ -87,19 +95,6 @@ export default function Home() {
               <span>Practical judgment</span>
             </div>
           </div>
-
-          <aside className="hero-panel" aria-label="NorthFluent AI learning journey">
-            <p className="hero-panel__eyebrow">Beginner journey</p>
-            <ul className="hero-panel__list">
-              <li>First, see why AI matters in daily life.</li>
-              <li>Then, learn what AI really is and what it is not.</li>
-              <li>Next, practice writing clearer prompts.</li>
-              <li>Finally, build judgment about when to trust and verify.</li>
-            </ul>
-            <Link to="/prompt-improver" className="text-link">
-              Practice with the Prompt Tool
-            </Link>
-          </aside>
         </div>
       </section>
 

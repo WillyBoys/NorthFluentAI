@@ -118,7 +118,7 @@ export default function AIBasics() {
   return (
     <>
       <section className="content-hero">
-        <div className="container content-hero__layout">
+        <div className="container content-hero__layout content-hero__layout--single">
           <div className="content-hero__copy">
             <p className="section-eyebrow">AI Basics</p>
             <h1>What is AI, really?</h1>
@@ -127,16 +127,20 @@ export default function AIBasics() {
               to understand than many people think. Learning the basics helps
               you use AI more confidently and more responsibly.
             </p>
+            <div className="hero-note">
+              <p className="tool-preview__label">Main idea</p>
+              <p>
+                AI is not a person or a mind. It is a human-built system that
+                uses data, algorithms, and computing power to perform tasks like
+                prediction, generation, recognition, and pattern matching.
+              </p>
+            </div>
+            <div className="hero-actions">
+              <Link to="/prompt-better" className="button button-primary">
+                Continue to Prompt Better
+              </Link>
+            </div>
           </div>
-
-          <aside className="content-hero__panel">
-            <p className="tool-preview__label">Main idea</p>
-            <p>
-              AI is not a person or a mind. It is a human built system that uses
-              data, algorithms, and computing power to perform tasks like
-              prediction, generation, recognition, and pattern matching.
-            </p>
-          </aside>
         </div>
       </section>
 
@@ -244,6 +248,17 @@ export default function AIBasics() {
             <li key={item}>{item}</li>
           ))}
         </ul>
+      </PageSection>
+
+      <PageSection surface="muted">
+        <div className="takeaway-panel">
+          <p className="section-eyebrow">What you learned</p>
+          <h2>AI is a human-built tool that needs clear direction and human review.</h2>
+          <p>
+            You now have the foundation for the next skill: asking AI better
+            questions so the results are easier to understand and use.
+          </p>
+        </div>
       </PageSection>
 
       <PageSection className="cta-strip">
