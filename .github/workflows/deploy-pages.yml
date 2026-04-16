@@ -27,15 +27,26 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Show project files
+        run: |
+          pwd
+          ls -la
+          node --version
+          npm --version
+
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Type check
+        run: npx tsc -b
+
+      - name: Build static site
+        run: npx vite build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
